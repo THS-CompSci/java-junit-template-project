@@ -1,18 +1,28 @@
-[![Build Status](https://travis-ci.org/mplacona/java-junit-template-project.png?branch=master)](https://travis-ci.org/mplacona/java-junit-template-project)
+# Java / JUnit starter project
 
-# Java + JUnit + Ant Template Project
-----------
-A Java template project pre configured with JUnit and Ant.
-It comes integrated with Travis CI, so continuous integration comes out of the box
+This is a starter for projects in class that need JUnit 4 unit testing and hook into Travis CI for build testing. 
 
-## Quick Start
-- Clone or download this repo
-- Run `ant` to get the unit tests going
+Replace this file with the instructions for the assignment and then push it to a new repo.
 
-## Contribute
-Github is all about contributions. If you think you can collaborate or improve this, please make sure you send me a pull request
+To clear out old commits for this repo so it's clean when it's pushed to GitHub use the following commands from the command line in the repo folder.
 
-## License
-Copyright (c) 2013 [@marcos_placona](https://twitter.com/marcos_placona), [Marcos Placona](https://plus.google.com/111557456465418142877).  
-[Placona.co.uk](http://www.placona.co.uk)
-Licensed under the MIT license.
+This one worked, but is supposed to have issues with submodules. 
+```
+rmdir .git -f
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <github-uri>
+git push -u --force origin master
+```
+
+This one is supposed to work with submodules, but I haven't tried it yet. 
+```
+git checkout --orphan newBranch
+git add -A  # Add all files and commit them
+git commit
+git branch -D master  # Deletes the master branch
+git branch -m master  # Rename the current branch to master
+git push -f origin master  # Force push master branch to github
+git gc --aggressive --prune=all     # remove the old files
+```
